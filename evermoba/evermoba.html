@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVER SITE MOBILE</title>
+    <link rel="stylesheet" type="text/css" href="evermob.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        
+        header {
+            background-color: #16a83d;
+            background: linear-gradient(to bottom,#16a83d, #16ec4f );
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            margin: 0 5px;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+        }
+        
+        
+        
+        
+        main {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        .mascote {
+            color: #333333;
+            margin-top: 20px;
+        }
+        
+        .extr {
+            margin-top: 20px;
+            background-color: #16a83d;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .lista {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .lista li {
+            margin-bottom: 10px;
+        }
+        
+        picture {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        picture img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        iframe {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+            
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav a {
+                margin: 5px;
+                width: 120px;
+            }
+            
+            .mascote {
+                font-size: 1.5em;
+            }
+            
+            .extr {
+                font-size: 1.2em;
+                background-color: #16ec4f;
+            }
+            
+            iframe {
+                width: 100%;
+            }
+        }
+        
+        h3 {
+            background-color: #16ec4f;
+            color: #fff;
+            text-align: left;
+            padding: 10px;
+        }
+        
+        .back {
+            background-color: #8fb89a;
+            margin-top: -20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="titulo">Curiosidades de Tecnologia</h1>
+            <p class="subt">Tudo aquilo que você sempre quis saber sobre o mundo Tech, em um único lugar</p>
+        </header>
+        
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Notícias</a>
+            <a href="#">Curiosidades</a>
+            <a id="faleConoscoButton" href="#">Fale Conosco</a>
+        </nav>
+        
+        <main>
+            <h2 class="mascote">História do Mascote do Android</h2>
+            <p>Provavelmente você sabe que o sistema operacional Android, mantido pelo Google, é um dos mais utilizados para dispositivos móveis em todo o mundo. Mas talvez você não saiba que o seu simpático mascote tem um nome e uma história muito curiosa? Pois acompanhe esse artigo para aprender muita coisa sobre esse robozinho.</p>
+            
+            <h2>A primeira versão</h2>
+            <p>A primeira tentativa de criar um mascote surgiu em 2007 e veio de um desenvolvedor chamado Dan Morrill. Ele conta que abriu o Inkscape (software livre para vetorização de imagens) e criou sua própria versão de robô. O objetivo era apenas personificar o sistema apenas para a a sua equipe, não existia nenhuma solicitação da empresa para a criação de um mascote.</p>
+            
+            <picture>
+                <source media="(max-width: 600px)" srcset="./imagens/dan-droids-pq.png" type="image/png">
+                <source media="(min-width: 601px) and (max-width: 1000px)" srcset="./imagens/dan-droids.png" type="image/png">
+                <img src="./imagens/dan-droids.png" alt="dan-droids">
+            </picture>
+            
+            <p>Essa primeira versão bizarra até foi batizada em homenagem ao seu criador: seriam os Dandroids.</p>
+            
+            <h2>Surge um novo mascote</h2>
+            <p>A ideia de ter um mascote foi amadurecendo e a missão foi passada para uma profissional da área. A ilustradora Russa Irina Blok, também funcionária do Google, ficou com a missão de representar o pequeno robô de uma maneira mais agradável.</p>
+            
+            <picture>
+                <source media="(max-width: 600px)" srcset="./imagens/irina-blok-pq.jpg" type="image/jpeg">
+                <source media="(min-width: 601px) and (max-width: 1000px)" srcset="./imagens/irina-block.jpg" type="image/jpeg">
+                <img src="./imagens/irina-blok-pq.jpg" alt="irina-blok">
+            </picture>
+            
+            <p>A ideia principal da Irina era representar tudo graficamente com poucos traços e de forma mais chapada. O desenho também deveria gerar identificação rápida com quem o olha. Surgiu então o Bugdroid, o novo mascote do Android.</p>
+            
+            <picture>
+                <source media="(max-width: 600px)" srcset="./imagens/bugdroid-pq.png" type="image/png">
+                <source media="(min-width: 601px) and (max-width: 1000px)" srcset="./imagens/bugdroid.png" type="image/png">
+                <img src="./imagens/bugdroid.png" alt="bugdroid">
+            </picture>
+            
+            <p>A principal inspiração para os traços do novo Bugdroid veio daqueles bonequinhos que ilustram portas de banheiro para indicar o gênero de cada porta. Conta a lenda que a artista estava criando em sua mesa no escritório do Google e olhou para o lado dos banheiros e a identificação foi imediata: simples, limpo, objetivo.</p>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M?si=3lIF8DhGMWPewapl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </main>
+        
+        <div class="ground">
+            <h3 class="extr">Quer aprender mais?</h3>
+            <div class="back">
+                <p>Outro assunto curioso em relação ao Android é que cada versão sempre foi nomeada em homenagem a um doce, em ordem alfabética a partir da versão 1.5 até a 9.0.</p>
+                <ul class="lista">
+                    <li>1.5 - Cupcake</li>
+                    <li>1.6 - Donut</li>
+                    <li>3.0 - Eclair</li>
+                    <li>2.2 - Froyo</li>
+                    <li>2.3 - Gingerbread</li>
+                    <li>3.0 - Honeycomb</li>
+                    <li>4.0 - Ice Cream Sandwich</li>
+                    <li>4.1 - Jelly Bean</li>
+                    <li>4.4 - KitKat</li>
+                    <li>5.0 - Lolipop</li>
+                    <li>6.0 - Marshmallow</li>
+                    <li>7.0 - Nougat</li>
+                    <li>8.0 - Oreo</li>
+                    <li>9.0 - Pie</li>
+                </ul>
+                <p>Infelizmente, o Android Q não existiu, pois o Google resolveu pôr fim a essa divertida prática e começou a usar numerações, o que deu origem ao Android 10.</p>
+                <p>Acesse aqui o site Android History para conhecer a sequência das versões "adocicadas" e o que cada uma trouxe para o sistema Android.</p>
+            </div>
+        </div>
+        
+    </div>
+    
+    <footer>
+        <p>&copy; Então é isso! Espero que você tenha gostado do nosso artigo com essa curiosidade sobre o sistema Android e seu simpático mascote.</p>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faleConoscoButton = document.getElementById('faleConoscoButton');
+            
+            faleConoscoButton.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'file:///E:/evermoba/faleconosco.html';
+            });
+        });
+    </script>
+</body>
+
+</html>

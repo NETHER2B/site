@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVER SITE MOBILE</title>
+    <link rel="stylesheet" type="text/css" href="evermob.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            padding: 10px 20px;
+            background-color: #16a83d;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #128c31;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+
+        header {
+            background-color: #16a83d;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color: #16a83d;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #128c31;
+        }
+
+        .success-message,
+        .error-message {
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a id="voltar" href="#">Voltar</a>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>Fale Conosco</h1>
+            <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+        </header>
+
+        <form id="contactForm" action="#" method="POST">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <input type="submit" value="Enviar">
+        </form>
+
+        <div id="statusMessage" class="hidden"></div>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const statusMessage = document.getElementById("statusMessage");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                fetch(form.action, {
+                    method: form.method,
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    form.reset();
+                    statusMessage.innerHTML = '<div class="success-message">Mensagem enviada com sucesso!</div>';
+                    statusMessage.classList.remove('hidden');
+                })
+                .catch((error) => {
+                    statusMessage.innerHTML = '<div class="error-message">Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.</div>';
+                    statusMessage.classList.remove('hidden');
+                });
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const voltar = document.getElementById('voltar');
+            
+            voltar.addEventListener('click', function(event) {
+                event.preventDefault();
+                window.location.href = 'file:///E:/evermoba/evermoba.html';
+            });
+        });
+    </script>
+
+</body>
+
+</html>
